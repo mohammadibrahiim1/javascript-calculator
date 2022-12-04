@@ -1,65 +1,45 @@
-.calculator-body {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  font-size: 22px;
-  width: 35%;
-  height: 50%;
+.calculator-container {
+  border: 1px solid #141414;
+  background-color: #141414;
+  width: 212px;
   margin: 0 auto;
-}
- #display{
-   
-    border: 1px solid gray;
-    padding: 20px;
-    margin-bottom: 12px;
-    border-radius: 5px;
-    text-align: right;
-    
-}
-
-.text {
-  text-align: center;
-  font-size: 25px;
-  font-weight: 600px;
-  text-transform: uppercase;
-  color: firebrick;
-}
-
-.calculator-number {
-  text-align: center;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
-  align-items: center;
-  margin-top: 15px;
-  gap: 14px;
-}
-
-.calculator-number button {
-  border: 1px solid gray;
-  border-radius: 5px;
+  height: 350px;
   padding: 20px;
-  color: orangered;
-  background-color: aliceblue;
-  font-size: 20px;
-  cursor: pointer;
 }
 
-.calculator-sign {
+.calculator-title{
   text-align: center;
+  font-size: 22px;
+  color: orangered;
+  margin-top: 22px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.calculator-body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
-  gap: 12px;
+  align-items: center;
+  
+
 }
 
-.calculator-sign button {
+.btn {
+  width: 48px;
+  margin: 0 auto;
+  margin-top: 5px;
+  height: 48px;
+  border-radius: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#calculator-display{
+  margin-top: 20px;
   border: 1px solid gray;
   padding: 20px;
+  background-color: #FFFFFF;
   border-radius: 5px;
-  color: royalblue;
-  background-color: aliceblue;
-  font-size: 20px;
+  text-align: right;
 }

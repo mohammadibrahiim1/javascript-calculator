@@ -1,35 +1,51 @@
 function calculator() {
-  let screen = document.getElementById("display");
+  let screen = document.getElementById("calculator-display");
   let digits = document.querySelectorAll(".btn");
-  //   let backButton = document.querySelector("back-btn");
-  //   let clearButton = document.querySelector("clear-btn");
-  //   let equalButton = document.querySelector("btn-equal");
   digits.forEach(function (digit) {
     digit.addEventListener("click", function (event) {
- 
       const value = event.target.innerText;
       console.log(value);
-    //   const screen.innerText = screen.innerText;
-    
       switch (value) {
-       
-        case "Ac":
-            screen.innerText = "";
+        case "ac":
+          screen.innerText = "";
           break;
 
-        case "back":
-          if (screen.innerText) {
-            screen.innerText = screen.innerText.slice(0, -1);
-          }
-          break;
-          case '=':
-            screen.innerText = eval(screen.innerText)
+          case "=":
+            screen.innerText = eval(screen.innerText);
             break;
+            case "back":
+
+           screen.innerText = screen.innerText.slice(0, -1);
+           break;
 
         default:
-            screen.innerText += value;
+          screen.innerText += value;
+          break;
       }
     });
   });
+  // digits.forEach(function (digit) {
+  //   digit.addEventListener("click", function (event) {
+  //     const value = event.target.innerText;
+  //     console.log(value);
+  //     switch (value) {
+  //       case "Ac":
+  //         screen.innerText = "";
+  //         break;
+
+  //       case "back":
+  //         if (screen.innerText) {
+  //           screen.innerText = screen.innerText.slice(0, -1);
+  //         }
+  //         break;
+  //       case "=":
+  //         screen.innerText = eval(screen.innerText);
+  //         break;
+
+  //       default:
+  //         screen.innerText += value;
+  //     }
+  //   });
+  // });
 }
 calculator();
