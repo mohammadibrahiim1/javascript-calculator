@@ -5,14 +5,21 @@ function calculator() {
     digit.addEventListener("click", function (event) {
       const value = event.target.innerText;
       console.log(value);
+
       switch (value) {
         case "ac":
           screen.innerText = "";
           break;
 
+        case "%":
+          screen.innerText = screen.innerText / 100;
+          break;
+
         case "=":
           screen.innerText = eval(screen.innerText);
+
           break;
+
         case "back":
           screen.innerText = screen.innerText.slice(0, -1);
           break;
